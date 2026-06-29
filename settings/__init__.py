@@ -1,0 +1,7 @@
+from .settings import (
+    GITHUB_TOKEN as GITHUB_TOKEN,
+    BOT_TOKEN as BOT_TOKEN,
+    CHAT_ID as CHAT_ID,
+    OPENROUTER_API_KEY as OPENROUTER_API_KEY,
+    MODEL as MODEL,
+)

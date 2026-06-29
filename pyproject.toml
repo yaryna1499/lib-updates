@@ -1,0 +1,33 @@
+[project]
+name = "lib-updates"
+version = "0.1.0"
+description = "This is a simple service that delivers summarized changelog summaries to telegram channel."
+readme = "README.md"
+authors = [
+  { name = "Y" },
+]
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.14.1",
+    "aioschedule>=0.5.2",
+    "dotenv>=0.9.9",
+    "openai>=2.44.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.14.4",
+    "pyright>=1.1.411",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pyright]
+typeCheckingMode = "standard"
+reportMissingTypeStubs = false
+reportMissingImports = false

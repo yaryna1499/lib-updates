@@ -5,7 +5,6 @@ from dataclasses import dataclass, field
 from typing import Any
 
 import aiohttp
-import aioschedule
 
 from services.github_connector import GithubConnector
 from services.tg_sender import TelegramBot
@@ -31,8 +30,6 @@ class Config:
         ]
     )
     state_file: str = "state.json"
-    check_interval_minutes: int = 30
-
 
 # ---------- STATE ----------
 
@@ -131,17 +128,7 @@ async def run() -> None:
     state = StateStore(config.state_file)
 
     async with aiohttp.ClientSession() as session:
-        aioschedule.every(config.check_interval_minutes).minutes.do(
-            check_releases,
-            session,
-            state,
-            config,
-        )
         await check_releases(session, state, config)
-
-        while True:
-            await aioschedule.run_pending()
-            await asyncio.sleep(max(0, aioschedule.idle_seconds()))
 
 
 if __name__ == "__main__":

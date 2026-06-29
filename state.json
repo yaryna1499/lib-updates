@@ -1,10 +1,9 @@
 {
-  "pydantic/pydantic": "v2.13.4",
-  "fastapi/fastapi": "0.138.2",
-  "sqlalchemy/sqlalchemy": "rel_2_0_51",
-  "astral-sh/uv": "0.11.25",
-  "sqlalchemy/alembic": "rel_1_18_5",
-  "pyca/bcrypt": "v0",
-  "aio-libs/aiobotocore": "3.7.0",
-  "pytest-dev/pytest": "9.1.1"
+  "pydantic/pydantic": "v0",
+  "fastapi/fastapi": "v0",
+  "sqlalchemy/sqlalchemy": "v0",
+  "astral-sh/uv": "v0",
+  "sqlalchemy/alembic": "v0",
+  "aio-libs/aiobotocore": "v0",
+  "pytest-dev/pytest": "v0"
 }

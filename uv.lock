@@ -93,12 +93,6 @@ wheels = [
 ]
 
 [[package]]
-name = "aioschedule"
-version = "0.5.2"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/39/8a/f73565aca3a01420a2e0906b7cd56c21060aeb420deba79b33b7e1f1c39e/aioschedule-0.5.2.tar.gz", hash = "sha256:1fe8621d287f58cbba3d73695fbbd890355294ac0c01981a1fd1e4f0510fc744", size = 12763, upload-time = "2018-02-02T16:51:33.94Z" }
-
-[[package]]
 name = "aiosignal"
 version = "1.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -357,7 +351,6 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "aiohttp" },
-    { name = "aioschedule" },
     { name = "dotenv" },
     { name = "openai" },
 ]
@@ -371,7 +364,6 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "aiohttp", specifier = ">=3.14.1" },
-    { name = "aioschedule", specifier = ">=0.5.2" },
     { name = "dotenv", specifier = ">=0.9.9" },
     { name = "openai", specifier = ">=2.44.0" },
     { name = "pyright", marker = "extra == 'dev'", specifier = ">=1.1.411" },

@@ -107,7 +107,7 @@ uv run pyright .
 |-----------|----------------------------------------------------------------------|
 | Runtime   | Python 3.13+, `asyncio`                                              |
 | HTTP      | `aiohttp` — async sessions for GitHub & Telegram                     |
-| Scheduling| `aioschedule` — periodic release polling                             |
+
 | LLM       | `openai` SDK → OpenRouter API (bring your own model)                 |
 | Config    | `dotenv` — `.env` file                                               |
 | Quality   | `ruff` (lint/format), `pyright` (type-checking)                      |

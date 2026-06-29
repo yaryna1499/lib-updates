@@ -37,7 +37,7 @@ Edit `.env`:
 
 | Variable              | Description                                   |
 |-----------------------|-----------------------------------------------|
-| `GITHUB_TOKEN`        | [GitHub PAT](https://github.com/settings/tokens) (public repo access) |
+| `GH_TOKEN`        | [GitHub PAT](https://github.com/settings/tokens) (public repo access) |
 | `BOT_TOKEN`           | Telegram bot token from [@BotFather](https://t.me/BotFather) |
 | `CHAT_ID`             | Target chat/channel ID (e.g. `-1001234567890`) |
 | `OPENROUTER_API_KEY`  | [OpenRouter API key](https://openrouter.ai/keys) |

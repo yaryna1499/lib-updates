@@ -12,7 +12,7 @@ class GithubConnector:
         url = f"https://api.github.com/repos/{repo}/releases/latest"
 
         headers = {
-            "Authorization": f"Bearer {settings.GITHUB_TOKEN}",
+            "Authorization": f"Bearer {settings.GH_TOKEN}",
             "Accept": "application/vnd.github+json",
         }
 

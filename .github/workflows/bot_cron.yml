@@ -9,6 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Restore state cache
+        uses: actions/cache@v4
+        id: state-cache
+        with:
+          path: state.json
+          key: release-state-v1
+
+      - name: Seed state from template on cache miss
+        if: steps.state-cache.outputs.cache-hit != 'true'
+        run: cp state.template.json state.json
 
       - name: Set up Python
         uses: actions/setup-python@v5

@@ -53,11 +53,11 @@ class StateStore:
             with open(self._path) as f:
                 return json.load(f)
         except FileNotFoundError:
-            logger.info("State file %s not found, starting fresh", self._path)
-            return {}
+            logger.error("State file %s not found — workflow must seed it from cache or template", self._path)
+            raise
         except json.JSONDecodeError:
-            logger.warning("Corrupt state file %s, starting fresh", self._path)
-            return {}
+            logger.error("Corrupt state file %s — inspect and fix or delete to regenerate", self._path)
+            raise
 
     def _save(self) -> None:
         with open(self._path, "w") as f:

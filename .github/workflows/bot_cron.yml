@@ -19,9 +19,8 @@ jobs:
           restore-keys: |
             release-state-
 
-      - name: Seed state from template on cache miss
-        if: steps.state-cache.outputs.cache-hit != 'true'
-        run: cp state.template.json state.json
+      - name: Seed state from template if absent
+        run: test -f state.json || cp state.template.json state.json
 
       - name: Set up Python
         uses: actions/setup-python@v6
